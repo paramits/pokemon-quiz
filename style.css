@@ -1,0 +1,255 @@
+html body {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "PKMN RBYGSC";
+  src: url("fonts/PKMN RBYGSC.ttf");
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+body {
+  font-family: "PKMN RBYGSC";
+  font-weight: 400;
+  font-style: normal;
+  background-image: url(img/bgalt2.png);
+  background-color: #ffd2c9;
+  background-repeat: no-repeat !important;
+  background-position: bottom;
+  background-size: 2250px, auto !important;
+}
+button {
+  padding: 10px;
+}
+
+button.choice {
+  width: 135px;
+  margin: 10px;
+  font-family: "fot-udkakugo-large-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  transition: 0.3s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#playAgain {
+  position: relative;
+  top: 282px;
+  left: 89px;
+}
+
+#playAgain button {
+  padding: 7px 18px;
+  width: 315px;
+  font-family: "fot-udkakugo-large-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  border-radius: 3px;
+  background-color: white;
+  border-color: #8c0623;
+  color: black;
+  transition: 0.3s;
+}
+
+#playAgain button:hover {
+  background-color: #00322c;
+  color: white;
+  border-color: #090507;
+}
+#quizChoices {
+  position: relative;
+  top: 245px;
+  left: 89px;
+  z-index: 3;
+  display: inline-block;
+}
+
+#quizChoices button {
+  background-color: #fcc500;
+  border-radius: 6px;
+  border: 2px #8c0623 solid;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+#quizChoices button:hover {
+  background: #d37a05;
+  color: white;
+}
+#quizChoices h2 {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 18px;
+}
+#pokemonDisplay img {
+  position: relative;
+  top: 232px;
+  left: 101px;
+}
+
+#resultDiv {
+  height: 50px;
+  width: 300px;
+  position: relative;
+  top: 215px;
+  left: 105px;
+  z-index: 1;
+  font-family: "PKMN RBYGSC";
+}
+
+.pokeImg {
+  max-width: 220px !important;
+  height: 220px !important;
+  /* Use dimensions below if pokedex.svg used */
+  /* max-width: 150px !important;
+  height: 150px !important; */
+}
+nav {
+  height: 100%;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 50px 0px 0px 0px;
+}
+header img {
+  width: 60%;
+  max-width: 780px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 25px;
+  font-family: "fot-udkakugo-large-pr6n", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  transition: 0.3s;
+}
+
+li {
+  text-align: center;
+  background: white;
+  width: 100px;
+  margin: 5px;
+  border-radius: 6px;
+  display: inline;
+  padding: 10px;
+  border: black solid 2px;
+  transition: 0.3s;
+}
+
+nav li:hover {
+  background: black;
+}
+
+nav button:focus {
+  background: #dc0a2d;
+}
+
+nav a:hover {
+  color: white;
+}
+
+#navmenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.kanto {
+  background-color: #acd36c;
+}
+
+.johto {
+  background-color: #dcd677;
+}
+
+.hoenn {
+  background-color: #9cd7c8;
+}
+
+.sinnoh {
+  background-color: #b7a3c3;
+}
+#pokemonDisplay {
+  width: 50%;
+  z-index: 1;
+  min-width: 450px;
+}
+
+#inputDisplay {
+  width: 450;
+  z-index: 1;
+  min-width: 450px;
+  overflow: hidden;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+#quizContainer {
+  height: 701px;
+  width: 900px;
+  min-width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+#quizContainer img {
+  width: 100%;
+  max-width: 900px;
+}
+
+#quizBackground {
+  position: absolute;
+  height: 701px;
+  width: 900px;
+  min-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quizBackground img {
+  z-index: 0;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+#credit {
+  margin: auto auto;
+  padding: 0px 40px;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/mbl8jqj.css" />
+    <script>
+      // Adobe Fonts told me to add the script below to get one of their fonts working (FOT-UDKakugo Large Pr6N font)
+      (function (d) {
+        var config = {
+            kitId: "ngw4efb",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+  </head>
+  <body>
+    <header><img src="img/title.png" /></header>
+    <!-- Navigation menu consisting of a list of four links for each Pokemon generation. An onclick function is added so it acts as a button. Once the "button" is clicked, then the checkGeneration function and generateNumbers function executes -->
+    <nav>
+      <h2>Choose a Pokemon Generation ▼</h2>
+      <div id="navmenu">
+        <ul>
+          <li class="kanto">
+            <a href="#" id="gen" onclick="checkGen(this), generateNumbers()"
+              >Kanto</a
+            >
+          </li>
+          <li class="johto">
+            <a href="#" id="gen" onclick="checkGen(this), generateNumbers()"
+              >Johto</a
+            >
+          </li>
+          <li class="hoenn">
+            <a
+              href="#"
+              id="gen hoenn"
+              onclick="checkGen(this), generateNumbers()"
+              >Hoenn</a
+            >
+          </li>
+          <li class="sinnoh">
+            <a
+              href="#"
+              id="gen sinnoh"
+              onclick="checkGen(this), generateNumbers()"
+              >Sinnoh</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- A container div to contain the quiz UI -->
+    <div id="container">
+      <div id="quizContainer">
+        <div id="quizBackground">
+          <img src="img/pokedex2.svg" />
+        </div>
+        <div id="pokemonDisplay"></div>
+        <div id="inputDisplay">
+          <div id="resultDiv"><p id="result">Result:</p></div>
+          <div id="quizChoices">
+            <!-- <h2>Select an answer:</h2> -->
+            <button
+              id="choiceOne"
+              type="button"
+              class="choice"
+              onclick="checkAns(this.innerHTML)"
+            ></button>
+            <button
+              id="choiceTwo"
+              type="button"
+              class="choice"
+              onclick="checkAns(this.innerHTML)"
+            ></button>
+            <button
+              id="choiceThree"
+              type="button"
+              class="choice"
+              onclick="checkAns(this.innerHTML)"
+            ></button>
+            <button
+              id="choiceFour"
+              type="button"
+              class="choice"
+              onclick="checkAns(this.innerHTML)"
+            ></button>
+          </div>
+
+          <div id="playAgain">
+            <button type="button" id="getPokemon" onClick="generateNumbers()">
+              Play Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <audio id="sfxWrong">
+        <source src="sound/wrong.mp3" type="audio/ogg" />
+      </audio>
+      <audio id="sfxRight">
+        <source src="sound/right.mp3" type="audio/ogg" />
+      </audio>
+      <div id="credit">
+        <p>
+          Made by Sabrina Paramitha / background from Bulbapedia
+          (https://bulbapedia.bulbagarden.net/wiki/Main_Page)
+        </p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
